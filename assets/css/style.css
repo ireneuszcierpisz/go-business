@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Flamenco&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#logo {
+    font-family: Flamenco, sans-serif;
+    /*	font-family: 'ADLaM Display', cursive; */
+    color: blue;
+    text-align: center;
+    padding: 10px;
+}
+
+#introduction {
+    text-align: center;
+    font-family: 'Flamenco', sans-serif;
+    color: #00008B;
+}
+
+input {
+    border: 1px solid black;
+    width: 80px;
+    margin-left: 30px;
+}
+
+div {
+    width: 80%;
+    height: fit-content;
+    text-align: left;
+    border: 1px solid lightgray;
+    margin-left: 10%;
+    padding: 4px;
+}
+
+#submit-button {
+    margin: 10px;
+    padding: 5px;
+}
