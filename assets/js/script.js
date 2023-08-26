@@ -1,18 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    showMessage();
     showSalesCostsFields();
 
     collectData();
 
 });
 
-function showMessage() {
-    document.getElementById("submit-button").addEventListener("click", function () {
-        console.log("submiting button clicked!");
-        document.getElementById("message").innerHTML = "You sent data! See your NPV:";
-    });
-}
 
 function showSalesCostsFields() {
     document.getElementById("nOfPeriods").addEventListener("keydown", function (event) {
@@ -37,21 +30,23 @@ function showSalesCostsFields() {
     });
 }
 
+
 function collectData() {
+    let nOfPeriods, capital, machine, discountRate, depreciation;
+    let sales = [];
+    let costs = [];
     document.getElementById("submit-button").addEventListener("click", function () {
-        let nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
         console.log("Got number of periods: " + nOfPeriods);
-        let capital = parseInt(document.getElementById("capital").value);
-        console.log("Got capital: " + capital);
-        let machine = parseInt(document.getElementById("machine").value);
+        capital = parseInt(document.getElementById("capital").value);
+        console.log("Got capital: " + capital + typeof capital);
+        machine = parseInt(document.getElementById("machine").value);
         console.log("Got machine value: " + machine);
-        let discountRate = parseInt(document.getElementById("discountRate").value);
+        discountRate = parseInt(document.getElementById("discountRate").value);
         console.log("Got discount rate: " + discountRate + '%');
-        let depreciation = parseInt(document.getElementById("depreciation").value);
+        depreciation = parseInt(document.getElementById("depreciation").value);
         console.log("Got depreciation: " + depreciation + '%');
 
-        let sales = [];
-        let costs = [];
         for (let i = 0; i < nOfPeriods - 1; i++) {
 
             let sale = parseInt(document.getElementById('sales').children[i].value);
@@ -63,16 +58,39 @@ function collectData() {
         }
         console.log('Looking for sales data, found: ' + sales);
         console.log('Looking for costs data, found: ' + costs);
+
+        //makes arrays of sales, costs and profits
+        let profitArray = [-(capital + machine)];
+        let releasedValue = (machine * ((100 - depreciation) / 100)) + capital;
+        console.log("releasedValue: " + releasedValue);
+        for (let i = 0; i < nOfPeriods - 1; i++) {
+            profitArray.push(sales[i] - costs[i]);
+        }
+        profitArray[nOfPeriods - 1] += releasedValue;
+        console.log("profitArray: " + profitArray);
+
+
+        let discountFactorArray = [1];
+        for (let i = 1; i < nOfPeriods; i++) {
+            discountFactorArray.push(Math.pow(1 + discountRate / 100, -i).toFixed(3));
+        }
+        console.log("discountFactorArray: " + discountFactorArray);
+
+        let npvArray = [];
+        for (let i = 0; i < nOfPeriods; i++) {
+            npvArray.push(parseInt(profitArray[i] * discountFactorArray[i]));
+        }
+        console.log("npvArray: " + npvArray);
+
+        let npv = 0;
+        for (let i = 0; i < npvArray.length; i++) {
+            npv += npvArray[i];
+        }
+        console.log(npv);
+
+        document.getElementById("message").innerHTML = `You sent data! See your NPV: ${npv}`;
+
     });
-}
-
-function calculateNPV() {
 
 }
 
-
-let x = document.getElementById('sales-costs').children;
-console.log('Looking for sales-costs data, found: ' + x);
-
-let capital = parseInt(document.getElementById("capital").value);
-console.log("Got capital: " + capital);
