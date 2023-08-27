@@ -33,30 +33,43 @@ function showSalesCostsFields() {
 
 function collectData() {
     let nOfPeriods, capital, machine, discountRate, depreciation;
-    let sales = [];
-    let costs = [];
     document.getElementById("submit-button").addEventListener("click", function () {
         nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        if (isNaN(nOfPeriods)) { alert(`Unknown number of years!`); }
         console.log("Got number of periods: " + nOfPeriods);
+
         capital = parseInt(document.getElementById("capital").value);
+        if (isNaN(capital)) { alert(`Unknown value of capital!`); }
         console.log("Got capital: " + capital + typeof capital);
+
         machine = parseInt(document.getElementById("machine").value);
+        if (isNaN(machine)) { alert(`Unknown value of machine!`); }
         console.log("Got machine value: " + machine);
+
         discountRate = parseInt(document.getElementById("discountRate").value);
+        if (isNaN(discountRate)) { alert(`Unknown value of discountRate!`); }
         console.log("Got discount rate: " + discountRate + '%');
+
         depreciation = parseInt(document.getElementById("depreciation").value);
+        if (isNaN(depreciation)) { alert(`Unknown value of depreciation!`); }
         console.log("Got depreciation: " + depreciation + '%');
 
+        if (document.getElementById('sales-costs').innerHTML === '') { alert(`Please fill in and press enter in the field of the number of years of investment!`); }
+        let sales = [];
+        let costs = [];
         for (let i = 0; i < nOfPeriods - 1; i++) {
 
             let sale = parseInt(document.getElementById('sales').children[i].value);
+            if (isNaN(sale)) { alert(`Unknown value of sale!`); }
             sales.push(sale);
 
             let cost = parseInt(document.getElementById('costs').children[i].value);
+            if (isNaN(cost)) { alert(`Unknown value of cost!`); }
             costs.push(cost);
 
         }
         console.log('Looking for sales data, found: ' + sales);
+        console.log('sales length: ' + sales.length);
         console.log('Looking for costs data, found: ' + costs);
 
         //makes arrays of sales, costs and profits
@@ -88,7 +101,7 @@ function collectData() {
         }
         console.log(npv);
 
-        document.getElementById("message").innerHTML = `You sent data! See your NPV: ${npv}`;
+        document.getElementById("message").innerHTML = `You sent data! See your NPV: <span id="npv-value">${npv}</span>`;
 
     });
 
