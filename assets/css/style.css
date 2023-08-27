@@ -6,18 +6,29 @@
     border: 0;
 }
 
-#logo {
+body {
+    background-color: #F5F5F5;
     font-family: Flamenco, sans-serif;
-    /*	font-family: 'ADLaM Display', cursive; */
+    text-align: center;
+}
+
+#logo {
+    /* font-family: Flamenco, sans-serif; */
+    font-family: 'ADLaM Display', cursive;
     color: blue;
     text-align: center;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
 }
 
 #introduction {
     text-align: center;
     font-family: 'Flamenco', sans-serif;
     color: #00008B;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    line-height: 1.4;
+    padding-bottom: 4px;
 }
 
 input {
@@ -27,15 +38,44 @@ input {
 }
 
 div {
-    width: 80%;
+    width: auto;
     height: fit-content;
-    text-align: left;
-    border: 1px solid lightgray;
-    margin-left: 10%;
-    padding: 4px;
+    text-align: center;
+    /* border: 1px solid lightgray; */
+    margin-bottom: 3px;
+    padding: 0;
+}
+
+#investment {
+    line-height: 1.6;
+    background-color: #DCDCDC;
+}
+
+#sales-costs {
+    line-height: 1.6;
+    background-color: #DCDCDC;
+}
+
+#discount-rate {
+    line-height: 1.6;
+    background-color: #DCDCDC;
+}
+
+#sell-release {
+    line-height: 1.6;
+    background-color: #DCDCDC;    
 }
 
 #submit-button {
-    margin: 10px;
-    padding: 5px;
+    margin: 20px 0 0 0;
+    padding: 10px;
+    background-color: #E0FFFF;
+    border: solid grey 1px;
+    border-radius: 5px;
+}
+
+#answer {
+    line-height: 2.5;
+    background-color: #DCDCDC;  
+    margin: 0;
 }

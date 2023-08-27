@@ -25,8 +25,8 @@
       </h1>
       <h3 id="introduction">
         <em
-          >Assume you decided to start up new business, make money and sell it
-          after few years. Make some assumptions and check if that business
+          >Assume you decided to start up a new business, make money and finish
+          after few years. Make some assumptions and check if that business will
           bring you more money then you just invested.</em
         >
       </h3>
@@ -35,7 +35,7 @@
     <div id="assumptions">
       <div id="investment">
         <p>
-          Put in below your assumptions how much money you invest in cash in
+          Put in below your assumptions how much money you want to invest in cash in
           year zero:
         </p>
         <p>
@@ -43,36 +43,36 @@
           <input
             id="capital"
             type="number"
-            placeholder="Type integer number"
+            placeholder="Integer"
             required
             min="5000"
           />
         </p>
         <p>
-          <label for="machine">Investment in machinery (min 1k euro)</label>
-          <input id="machine" type="number" required min="1000" />
+          <label for="machine">Investment in machinery (min 5k euro)</label>
+          <input id="machine" type="number" required min="5000" placeholder="Integer"/>
         </p>
         <p>
-          Input the number of years until capital release
+          Input the number of years until capital release (min 3  max 10)
           <input id="nOfPeriods" type="number" required min="3" max="10" /> and
-          press Enter.
+          <b>press Enter</b>.
         </p>
       </div>
 
       <div id="sales-costs"></div>
 
       <div id="discount-rate">
-        <p>Value of Capital Discount Rate or Debt Percentage [%].</p>
+        <p>Value of Capital Discount Rate or Debt Percentage.</p>
         <p>
           <label for="discountRate"
-            >Put in an integer number from 1 to 30:</label
+            >Put in an integer number from 1 to 20:</label
           >
-          <input id="discountRate" type="number" required min="2" max="20" />
+          <input id="discountRate" type="number" required min="2" max="20" />%
         </p>
       </div>
       <div id="sell-release">
         <p>
-          At the end of the last year of making this business you sell the
+          At the end of the last year of making your business you sell the
           machineries and release working capital. A price of the machines will
           be lower by
           <input id="depreciation" type="number" required min="10" max="100" />%
