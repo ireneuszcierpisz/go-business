@@ -46,6 +46,7 @@
             placeholder="Integer"
             required
             min="5000"
+            aria-label="Input integer number"
           />
         </p>
         <p>
@@ -56,11 +57,12 @@
             required
             min="5000"
             placeholder="Integer"
+            aria-label="Input integer number"
           />
         </p>
         <p>
           Input the <b>number of years</b> until capital release (min 3 max 10)
-          <input id="nOfPeriods" type="number" required min="3" max="10" /> and
+          <input id="nOfPeriods" type="number" required min="3" max="10" aria-label="Input integer number and press Enter"/> and
           <b>press Enter</b>.
         </p>
       </div>
@@ -73,7 +75,7 @@
           <label for="discountRate"
             >Put in an integer number from 1 to 20:</label
           >
-          <input id="discountRate" type="number" required min="2" max="20" />%
+          <input id="discountRate" type="number" required min="2" max="20" aria-label="Input integer number"/>%
         </p>
       </div>
       <div id="sell-release">
@@ -81,15 +83,15 @@
           At the end of the last year of making your business you sell the
           machineries and release working capital. A price of the machines will
           be lower by
-          <input id="depreciation" type="number" required min="10" max="100" />%
+          <input id="depreciation" type="number" required min="10" max="100" aria-label="Input integer number"/>%
         </p>
-        <button id="submit-button" type="button">
+        <button id="submit-button" type="button" aria-label="Click to check if NPV is positive">
           Click here to check if at the end of the periods of your investment
           the Net Present Value is positive.
         </button>
       </div>
     </div>
-    <div id="answer">
+    <div id="answer" aria-labelledby="message">
       <p id="message"></p>
     </div>
 
