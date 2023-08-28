@@ -101,7 +101,13 @@ function collectData() {
         }
         console.log(npv);
 
-        document.getElementById("message").innerHTML = `You sent data! See your NPV: <span id="npv-value">${npv}</span>`;
+        if (npv > 0) {
+            document.getElementById("message").innerHTML = `<b>You sent data! See your NPV</b>: <h3 style="font-family:sans-serif; color:blue; border:1px solid grey; background-color:whitesmoke; width: auto; height:auto; text-align:center; padding: 4px 1.5rem; display:inline-block;">+${npv}</h3><p style="display:inline-block; margin-left:10px;"><span style="padding:0 5px;"></span><b>Your intuition is great! You are the winner!</b></p>`;
+            console.log('final message "winner" shown!');
+        } else {
+            document.getElementById("message").innerHTML = `<b>You sent data! See your NPV</b>: <h3 style="font-family:sans-serif; color:red; border:1px solid grey; background-color:whitesmoke; width: auto; height:auto; text-align:center; padding: 4px 1.5rem; display:inline-block;">${npv}</h3><p style="display:inline-block; margin-left:10px"><span style="padding:0 5px;"></span><b>You will lose money! Try again!</b></p>`;
+            console.log('final message "try-again" shown!');
+        }
 
     });
 

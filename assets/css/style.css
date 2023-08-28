@@ -10,6 +10,7 @@ body {
     background-color: #F5F5F5;
     font-family: Flamenco, sans-serif;
     text-align: center;
+    padding: 3px;
 }
 
 #logo {
@@ -63,7 +64,7 @@ div {
 
 #sell-release {
     line-height: 1.6;
-    background-color: #DCDCDC;    
+    background-color: #DCDCDC;
 }
 
 #submit-button {
@@ -75,7 +76,10 @@ div {
 }
 
 #answer {
-    line-height: 2.5;
-    background-color: #DCDCDC;  
+    line-height: 2rem;
+    background-color: #DCDCDC;
     margin: 0;
+    padding: 3px;
+    color: green;
 }
+
