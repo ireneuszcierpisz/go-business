@@ -1,3 +1,5 @@
+// Wait for the DOM to finish loading before running the script
+
 document.addEventListener("DOMContentLoaded", function () {
 
     showSalesCostsFields();
@@ -6,7 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
+/**
+ * Get HTML element and add event listeners to it
+ * Gets the value directly from the DOM
+ * Inject new elements to index.html using template literals
+ */
 function showSalesCostsFields() {
     document.getElementById("nOfPeriods").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -30,7 +36,14 @@ function showSalesCostsFields() {
     });
 }
 
-
+/**
+ * Add event listener to the button
+ * Get values from DOM elements
+ * Add alerts to the inputs
+ * Make calculations of the NPV
+ * Insert new html elements in 'answer' div
+ * Launch the final message
+ */
 function collectData() {
     let nOfPeriods, capital, machine, discountRate, depreciation;
     document.getElementById("submit-button").addEventListener("click", function () {
