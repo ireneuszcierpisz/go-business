@@ -5,6 +5,12 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 ![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done.png)
 
+- Page is full responsive.
+- Easy navigation. 
+- Using Enter key in the field of numbers of periods launch a table of sales and costs.
+- This section will allow the user to easily change previous amounts to calculate again.
+
+
 
 ## Features
 
@@ -15,27 +21,23 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 ![Picture of the heading here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/heading.png)
 
 
-#### Fields where an users can put in theirs assumptions about a bussiness 
+#### Fields where an users can put in theirs assumptions about a bussiness: 
 
-- Page is full responsive.
-- Easy navigation. 
-- Using Enter key in the field of numbers of periods launch a table of sales and costs.
-- This section will allow the user to easily change previous amounts to calculate again.
 
 ![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/first-step.png)
 
 
-#### Sales and costs part injected to the html with java script using DOM
+#### Sales and costs are injected to the html with java script using DOM
 
-- To launch this part of the code user has to use the Enter key.
-- A number of fields to fill in is equal to the number given by the user minus 1 as a year of investment is zero year.
+- To launch this part of the code user has to use the Enter key when inputs the number of years.
+- A number of fields of sales and costs to fill in is equal to the number given by the user minus 1 as a year of investment is zero year.
 
 ![Picture of launched sales-costs here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JS-DOM.png)
 
 
-#### Final message launch with java script and DOM
+#### Final message launched with java script using DOM elements
 
-- This is a message including a value of the NPV.
+- This is a message included a value of the NPV.
 - JS injects new elements to index.html using template literals
 
 ![Picture of gallery here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JSDOM-finalmessage.png)
@@ -43,7 +45,7 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 ## Accessibility
 
-- For better accessibility there are used the aria-label and aria-labelledby atributes in the html code.
+- There are used the aria-label and aria-labelledby atributes in the html code.
 
 
 ## Testing
