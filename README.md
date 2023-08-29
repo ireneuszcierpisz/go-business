@@ -1,10 +1,10 @@
 ![Go Business logo](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
 
-# GoBusiness
 
-An investment game based on the NPV economic measure. You can check whether your investment will be profitable down the line.
+GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
 
-![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
+![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done.png)
+
 
 ## Features
 
@@ -22,7 +22,7 @@ An investment game based on the NPV economic measure. You can check whether your
 - Using Enter key in the field of numbers of periods launch a table of sales and costs.
 - This section will allow the user to easily change previous amounts to calculate again.
 
-![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/assumptions.png)
+![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/first-step.png)
 
 
 #### Sales and costs part injected to the html with java script using DOM
@@ -35,14 +35,15 @@ An investment game based on the NPV economic measure. You can check whether your
 
 #### Final message launch with java script and DOM
 
-- Injects new elements to index.html using template literals
+- This is a message including a value of the NPV.
+- JS injects new elements to index.html using template literals
 
 ![Picture of gallery here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JSDOM-finalmessage.png)
 
 
 ## Accessibility
 
-- For better Accessibility there are used the aria-label and aria-labelledby atributes in the html code.
+- For better accessibility there are used the aria-label and aria-labelledby atributes in the html code.
 
 
 ## Testing
@@ -55,7 +56,7 @@ An investment game based on the NPV economic measure. You can check whether your
 
 ### Validator Testing
 
-#### Responsivnes
+#### Responsiveness
 
 - Link https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/
 
@@ -109,12 +110,13 @@ An investment game based on the NPV economic measure. You can check whether your
 ## Credits
 
   - GoBusiness is made thanks Code Institute lectures in Full Stack Software Development (E-commerce Applications) course.
+  - The concept of using NPV (Net Present Value) method as a business project appraisal method as well as formulas I took from the book FINANCE THEORY AND PRACTICE by ANN MARIE WARD. As it is said, the NPV method of project appraisal discounts the cash inflows and outflows of an investment to their present value. If the NPV is positive, then the project should be accepted else should be rejected. Working capital is both an investment and a source and use of finance.
 
 
 ### Content
 
 - The icon in the header section were taken from Font Awesome
 - Font Flamenco for the logo and ADLaM Display were taken from Google Fonts
-- Favicon I got thanks to favicon.io
+- Favicon I got thanks to [favicon.io](https://favicon.io/)
 
 
