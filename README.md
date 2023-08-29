@@ -1,39 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Go Business logo](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
 
-Welcome,
+# GoBusiness
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+An investment game based on the NPV economic measure. You can check whether your investment will be profitable down the line.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **July 26th, 2023**
+![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
 
-## Codeanywhere Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+#### The heading
 
-`python3 -m http.server`
+- This section introduces the user to GoBusiness app.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Picture of the heading here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/heading.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
+#### Fields where an users can put in theirs assumptions about a bussiness 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Page is full responsive.
+- Easy navigation. 
+- Using Enter key in the field of numbers of periods launch a table of sales and costs.
+- This section will allow the user to easily change previous amounts to calculate again.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/assumptions.png)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+#### Sales and costs part injected to the html with java script using DOM
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- To launch this part of the code user has to use the Enter key.
+- A number of fields to fill in is equal to the number given by the user minus 1 as a year of investment is zero year.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Picture of launched sales-costs here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JS-DOM.png)
 
----
 
-Happy coding!
+#### Final message launch with java script and DOM
+
+- Injects new elements to index.html using template literals
+
+![Picture of gallery here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JSDOM-finalmessage.png)
+
+
+## Accessibility
+
+- For better Accessibility there are used the aria-label and aria-labelledby atributes in the html code.
+
+
+## Testing
+
+- Making GoBusiness I have permanently conducting testing using Google Chrome Inspect feature, in particular the Console Toolbar, to test the functionality of the java script of the application.
+- Tools for checking elements style were very helpful as well.
+- Also I tested GoBusiness asking an accountant for the review.
+- GoBusiness is responsive on different screen sizes and in different browsers as well.
+
+
+### Validator Testing
+
+#### Responsivnes
+
+- Link https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/
+
+
+- Screenshot
+
+   ![by amiresponsive](https://github.com/ireneuszcierpisz/go-business/blob/main/media/responsive.png)
+
+
+#### HTML
+
+**No errors were returned when passing through the official W3C validator**
+
+- Link
+
+   ![by W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F)
+
+
+- Screenshot
+
+  ![index.html](https://github.com/ireneuszcierpisz/go-business/blob/main/media/HTMLChecker.png)
+
+
+#### CSS
+
+**No errors were found when passing through the official W3C validator**
+
+- Link
+
+  ![by Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+)
+
+- Screenshot
+
+  ![index.html](https://github.com/ireneuszcierpisz/go-business/blob/main/media/W3CCSSvalidation.png)
+
+
+#### Java Script
+
+- To validate the code I have used https://jshint.com/
+
+
+## Deployment
+
+  - The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed
+  - The live link can be found here - [GoBusiness](https://ireneuszcierpisz.github.io/go-business/)
+
+## Credits
+
+  - GoBusiness is made thanks Code Institute lectures in Full Stack Software Development (E-commerce Applications) course.
+
+
+### Content
+
+- The icon in the header section were taken from Font Awesome
+- Font Flamenco for the logo and ADLaM Display were taken from Google Fonts
+- Favicon I got thanks to favicon.io
+
+
