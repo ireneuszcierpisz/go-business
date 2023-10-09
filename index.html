@@ -14,7 +14,7 @@
     />
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    
+
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>GoBusiness Game</title>
@@ -27,14 +27,14 @@
       </h1>
       <h3 id="introduction">
         <em
-          >Assume you decided to start up a new business, make money and finish
-          after few years. Make some assumptions and check if that business will
-          bring you more money then you just invested.</em
+          >Let's say you decided to start a new business, make money, and close
+          it after a few years. Make some assumptions and see if this business
+          will make you more money than you just invested.</em
         >
       </h3>
     </div>
 
-<!-- Add input fields that the user will fill in-->
+    <!-- Add input fields that the user will fill in-->
     <div id="assumptions">
       <div id="investment">
         <p>
@@ -65,8 +65,15 @@
         </p>
         <p>
           Input the <b>number of years</b> until capital release (min 3 max 10)
-          <input id="nOfPeriods" type="number" required min="3" max="10" aria-label="Input integer number and press Enter"/> and
-          <b>press Enter</b>.
+          <input
+            id="nOfPeriods"
+            type="number"
+            required
+            min="3"
+            max="10"
+            aria-label="Input integer number and press Enter"
+          />
+          and <b>press Enter</b>.
         </p>
       </div>
 
@@ -79,23 +86,41 @@
           <label for="discountRate"
             >Put in an integer number from 1 to 20:</label
           >
-          <input id="discountRate" type="number" required min="2" max="20" aria-label="Input integer number"/>%
+          <input
+            id="discountRate"
+            type="number"
+            required
+            min="2"
+            max="20"
+            aria-label="Input integer number"
+          />%
         </p>
       </div>
       <div id="sell-release">
         <p>
           At the end of the last year of making your business you sell the
           machineries and release working capital. A price of the machines will
-          be lower by
-          <input id="depreciation" type="number" required min="10" max="100" aria-label="Input integer number"/>%
+          be lower by (10-100)
+          <input
+            id="depreciation"
+            type="number"
+            required
+            min="10"
+            max="100"
+            aria-label="Input integer number"
+          />%
         </p>
-        <button id="submit-button" type="button" aria-label="Click to check if NPV is positive">
+        <button
+          id="submit-button"
+          type="button"
+          aria-label="Click to check if NPV is positive"
+        >
           Click here to check if at the end of the periods of your investment
           the Net Present Value is positive.
         </button>
       </div>
     </div>
-    
+
     <div id="answer" aria-labelledby="message">
       <!-- Here html elements will be added with Java Script -->
       <p id="message"></p>

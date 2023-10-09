@@ -45,20 +45,46 @@ function showSalesCostsFields() {
 function collectData() {
     let nOfPeriods, capital, machine, discountRate, depreciation;
     document.getElementById("submit-button").addEventListener("click", function () {
-        nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
-        if (isNaN(nOfPeriods)) { alert(`Unknown number of years!`); }
 
         capital = parseInt(document.getElementById("capital").value);
-        if (isNaN(capital)) { alert(`Unknown value of capital!`); }
+        if (isNaN(capital) || capital < 5000) {
+            document.getElementById("capital").value = "";
+            document.getElementById("capital").focus();
+            alert(`Invalid value of capital! Enter a number bigger than 5000.`);
+            throw `Invalid value of capital!`;
+        }
 
         machine = parseInt(document.getElementById("machine").value);
-        if (isNaN(machine)) { alert(`Unknown value of machine!`); }
+        if (isNaN(machine) || machine < 5000) {
+            document.getElementById("machine").value = "";
+            document.getElementById("machine").focus();
+            alert(`Invalid value of machinery! Enter a number bigger than 5000.`);
+            throw `Invalid value of machine!`;
+        }
+
+        nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        if (isNaN(nOfPeriods) || nOfPeriods < 3 || nOfPeriods > 10) {
+            document.getElementById("nOfPeriods").value = "";
+            document.getElementById("nOfPeriods").focus();
+            alert(`Invalid value for the number of years of investment! Enter a number from 3-10.`);
+            throw `Invalid value for the number of years of investment!`;
+        }
 
         discountRate = parseInt(document.getElementById("discountRate").value);
-        if (isNaN(discountRate)) { alert(`Unknown value of discountRate!`); }
+        if (isNaN(discountRate) || discountRate < 1 || discountRate > 20) {
+            document.getElementById("discountRate").value = "";
+            document.getElementById("discountRate").focus();
+            alert(`Invalid value of discountRate! Enter a number from 1-20.`);
+            throw `Invalid value of discountRate!`;
+        }
 
         depreciation = parseInt(document.getElementById("depreciation").value);
-        if (isNaN(depreciation)) { alert(`Unknown value of depreciation!`); }
+        if (isNaN(depreciation) || depreciation < 10 || depreciation > 100) {
+            document.getElementById("depreciation").value = "";
+            document.getElementById("depreciation").focus();
+            alert(`Invalid value of machine depreciation! Enter a number from 10-100.`);
+            throw `Invalid value of machine depreciation!`;
+        }
 
         if (document.getElementById('sales-costs').innerHTML === '') { alert(`Please fill in and press enter in the field of the number of years of investment!`); }
         //gets arrays of sales and costs
@@ -67,11 +93,21 @@ function collectData() {
         for (let i = 0; i < nOfPeriods - 1; i++) {
 
             let sale = parseInt(document.getElementById('sales').children[i].value);
-            if (isNaN(sale)) { alert(`Unknown value of sale!`); }
+            if (isNaN(sale) || sale < 0) {
+                document.getElementById('sales').children[i].value = "";
+                document.getElementById('sales').children[i].focus();
+                alert(`Invalid value of sale! Must be zero or greater.`);
+                throw `Invalid value of sale!`;
+            }
             sales.push(sale);
 
             let cost = parseInt(document.getElementById('costs').children[i].value);
-            if (isNaN(cost)) { alert(`Unknown value of cost!`); }
+            if (isNaN(cost) || cost < 0) {
+                document.getElementById('costs').children[i].value = "";
+                document.getElementById('costs').children[i].focus();
+                alert(`Invalid value of cost! Must be zero or greater.`);
+                throw `Invalid value of cost!`;
+             }
             costs.push(cost);
         }
 
@@ -111,4 +147,3 @@ function collectData() {
     });
 
 }
-
