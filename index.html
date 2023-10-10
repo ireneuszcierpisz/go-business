@@ -42,7 +42,7 @@
           cash in year zero:
         </p>
         <p>
-          <label for="capital">Working Capital (min 5k euro)</label>
+          <label for="capital">Working Capital (min <b>5k</b> euro)</label>
           <input
             id="capital"
             type="number"
@@ -53,7 +53,9 @@
           />
         </p>
         <p>
-          <label for="machine">Investment in machinery (min 5k euro)</label>
+          <label for="machine"
+            >Investment in machinery (min <b>5k</b> euro)</label
+          >
           <input
             id="machine"
             type="number"
@@ -64,7 +66,8 @@
           />
         </p>
         <p>
-          Input the <b>number of years</b> until capital release (min 3 max 10)
+          Input the <b>number of years</b> until capital release (min
+          <b>3</b> max <b>10</b>)
           <input
             id="nOfPeriods"
             type="number"
@@ -73,7 +76,8 @@
             max="10"
             aria-label="Input integer number and press Enter"
           />
-          and <b>press Enter</b>.
+          <span><button id="check-button" type="button">Check!</button></span>
+          <span id="err-msg"></span>
         </p>
       </div>
 
@@ -84,7 +88,7 @@
         <p>Value of Capital Discount Rate or Debt Percentage.</p>
         <p>
           <label for="discountRate"
-            >Put in an integer number from 1 to 20:</label
+            >Put in an integer number from <b>1</b> to <b>20</b>:</label
           >
           <input
             id="discountRate"
@@ -100,7 +104,7 @@
         <p>
           At the end of the last year of making your business you sell the
           machineries and release working capital. A price of the machines will
-          be lower by (10-100)
+          be lower by (<b>10-100</b>)
           <input
             id="depreciation"
             type="number"

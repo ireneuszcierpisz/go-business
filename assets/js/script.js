@@ -14,24 +14,43 @@ document.addEventListener("DOMContentLoaded", function () {
  * Inject new elements to index.html using template literals
  */
 function showSalesCostsFields() {
-    document.getElementById("nOfPeriods").addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            let nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+    document.getElementById("check-button").addEventListener("click", function () {
+        let nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        document.getElementById("err-msg").innerHTML = '';
+        let tip = " (Number from 3 to 10 required)";
+        let ok = false;
+        try {
+            if (isNaN(nOfPeriods) || nOfPeriods < 3 || nOfPeriods > 10)
+                throw "Enter the correct value and click the red button! ";
+            else tip = "";
+            document.getElementById('check-button').style.backgroundColor = '#7FFF00';
+            document.getElementById('check-button').innerHTML = 'OK!';
+            ok = true;
+        }
+        catch (err) {
+            document.getElementById("err-msg").innerHTML = err + tip;
+            document.getElementById('check-button').style.backgroundColor = '#FF7F50';
+            document.getElementById('check-button').innerHTML = 'Error';
+        }
+
+        if (ok) {
             let html4inputs = ``;
             for (let i = 1; i < nOfPeriods; i++) {
                 html4inputs += `
-                Year ${i} <input type="number" required min="0"/>   
-                `;
+                    Year ${i} <input type="number" required min="0"/>   
+                    `;
             }
             document.getElementById("sales-costs").innerHTML = `
-                <p>You entered duration of the business ${nOfPeriods} years (Note that the investment year is year zero).  Now complete next necessary data, please. Enter the values ​​of planned sales and costs starting from year one.</p>
-                <p>First your assumptions about <b>sales</b> in the following years:</p>
-                <p id="sales">` + html4inputs + `</p>`
+                    <p>You entered duration of the business ${nOfPeriods} years (Note that the investment year is year zero).  Now complete next necessary data, please. Enter the values ​​of planned sales and costs starting from year one.</p>
+                    <p>First your assumptions about <b>sales</b> in the following years:</p>
+                    <p id="sales">` + html4inputs + `</p>`
                 + `<p> Here your assumptions about <b>costs:</b></p>
-                <p id="costs">` + html4inputs + `</p>`;
-
+                    <p id="costs">` + html4inputs + `</p>`;
+        } else {
+            document.getElementById("sales-costs").innerHTML = "";
         }
-    });
+    }
+    );
 }
 
 /**
@@ -86,7 +105,7 @@ function collectData() {
             throw `Invalid value of machine depreciation!`;
         }
 
-        if (document.getElementById('sales-costs').innerHTML === '') { alert(`Please fill in and press enter in the field of the number of years of investment!`); }
+        if (document.getElementById('sales-costs').innerHTML === '') { alert(`Please fill in the field of the number of years of investment and click the yellow button!`); }
         //gets arrays of sales and costs
         let sales = [];
         let costs = [];
@@ -107,7 +126,7 @@ function collectData() {
                 document.getElementById('costs').children[i].focus();
                 alert(`Invalid value of cost! Must be zero or greater.`);
                 throw `Invalid value of cost!`;
-             }
+            }
             costs.push(cost);
         }
 
@@ -141,7 +160,7 @@ function collectData() {
         if (npv > 0) {
             document.getElementById("message").innerHTML = `<b>You sent data! See your NPV</b>: <h3 style="font-family:sans-serif; color:blue; border:1px solid grey; background-color:whitesmoke; width: auto; height:auto; text-align:center; padding: 4px 1.5rem; display:inline-block;">+${npv}</h3><p style="display:inline-block; margin-left:10px;"><span style="padding:0 5px;"></span><b>Your intuition is great! You are the winner!</b></p>`;
         } else {
-            document.getElementById("message").innerHTML = `<b>You sent data! See your NPV</b>: <h3 style="font-family:sans-serif; color:red; border:1px solid grey; background-color:whitesmoke; width: auto; height:auto; text-align:center; padding: 4px 1.5rem; display:inline-block;">${npv}</h3><p style="display:inline-block; margin-left:10px"><span style="padding:0 5px;"></span><b>You will lose money! Try again!</b></p>`;
+            document.getElementById("message").innerHTML = `<b>You sent data! See your NPV</b>: <h3 style="font-family:sans-serif; color:red; border:1px solid grey; background-color:whitesmoke; width: auto; height:auto; text-align:center; padding: 4px 1.5rem; display:inline-block;">${npv}</h3><p style="display:inline-block; margin-left:10px"><span style="padding:0 5px;"></span><b>You will lose money! Try again! Change some assumptions.</b></p>`;
         }
 
     });
