@@ -63,6 +63,7 @@ function showSalesCostsFields() {
  */
 function collectData() {
     let nOfPeriods, capital, machine, discountRate, depreciation;
+    let years = 0;
     document.getElementById("submit-button").addEventListener("click", function () {
 
         capital = parseInt(document.getElementById("capital").value);
@@ -87,6 +88,12 @@ function collectData() {
             document.getElementById("nOfPeriods").focus();
             alert(`Invalid value for the number of years of investment! Enter a number from 3-10.`);
             throw `Invalid value for the number of years of investment!`;
+        } else {
+            if (years != nOfPeriods) {
+                years = nOfPeriods;
+                document.getElementById('check-button').style.backgroundColor = 'yellow';
+                document.getElementById('check-button').innerHTML = 'Click!';
+            }
         }
 
         discountRate = parseInt(document.getElementById("discountRate").value);
