@@ -22,7 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Assign DOM elements to constants
+const workingCapital = document.getElementById("capital");
+const machinery = document.getElementById("machine");
 const periods = document.getElementById("nOfPeriods");
+const checkButton = document.getElementById("check-button");
+const errMsg = document.getElementById("err-msg");
+const salesCosts = document.getElementById("sales-costs");
+const discount = document.getElementById("discountRate");
+const machineDepreciation = document.getElementById("depreciation");
 
 /**
  * Get HTML element and add event listeners to it
@@ -30,40 +38,40 @@ const periods = document.getElementById("nOfPeriods");
  * Inject new elements to index.html using template literals
  */
 function showSalesCostsFields() {
-    document.getElementById("check-button").addEventListener("click", function () {
+    checkButton.addEventListener("click", function () {
         let nOfPeriods = parseInt(periods.value);
-        document.getElementById("err-msg").innerHTML = '';
+        errMsg.innerHTML = '';
         let tip = " (Number from 3 to 10 required)";
-        let ok = false;
+        let inputValid = false;
         try {
             if (isNaN(nOfPeriods) || nOfPeriods < 3 || nOfPeriods > 10)
                 throw "Enter the correct value and click the red button! ";
             else tip = "";
-            document.getElementById('check-button').style.backgroundColor = '#7FFF00';
-            document.getElementById('check-button').innerHTML = 'OK!';
-            ok = true;
+            checkButton.style.backgroundColor = '#7FFF00';
+            checkButton.innerHTML = 'OK!';
+            inputValid = true;
         }
         catch (err) {
-            document.getElementById("err-msg").innerHTML = err + tip;
-            document.getElementById('check-button').style.backgroundColor = '#FF7F50';
-            document.getElementById('check-button').innerHTML = 'Error';
+            errMsg.innerHTML = err + tip;
+            checkButton.style.backgroundColor = '#FF7F50';
+            checkButton.innerHTML = 'Error';
         }
 
-        if (ok) {
+        if (inputValid) {
             let html4inputs = ``;
             for (let i = 1; i < nOfPeriods; i++) {
                 html4inputs += `
                     Year ${i} <input type="number" required min="0"/>   
                     `;
             }
-            document.getElementById("sales-costs").innerHTML = `
+            salesCosts.innerHTML = `
                     <p>You entered duration of the business ${nOfPeriods} years (Note that the investment year is year zero).  Now complete next necessary data, please. Enter the values ​​of planned sales and costs starting from year one.</p>
                     <p>First your assumptions about <b>sales</b> in the following years:</p>
                     <p id="sales">` + html4inputs + `</p>`
                 + `<p> Here your assumptions about <b>costs:</b></p>
                     <p id="costs">` + html4inputs + `</p>`;
         } else {
-            document.getElementById("sales-costs").innerHTML = "";
+            salesCosts.innerHTML = "";
         }
     }
     );
@@ -78,75 +86,77 @@ function showSalesCostsFields() {
  * Launch the final message
  */
 function collectData() {
-    let nOfPeriods, capital, machine, discountRate, depreciation;
+    let capital, machine, nOfPeriods, discountRate, depreciation;
     let years = 0;
     document.getElementById("submit-button").addEventListener("click", function () {
 
-        capital = parseInt(document.getElementById("capital").value);
+        capital = parseInt(workingCapital.value);
         if (isNaN(capital) || capital < 5000) {
-            document.getElementById("capital").value = "";
-            document.getElementById("capital").focus();
+            workingCapital.value = "";
+            workingCapital.focus();
             alert(`Invalid value of capital! Enter a number bigger than 5000.`);
             throw `Invalid value of capital!`;
         }
 
-        machine = parseInt(document.getElementById("machine").value);
+        machine = parseInt(machinery.value);
         if (isNaN(machine) || machine < 5000) {
-            document.getElementById("machine").value = "";
-            document.getElementById("machine").focus();
+            machinery.value = "";
+            machinery.focus();
             alert(`Invalid value of machinery! Enter a number bigger than 5000.`);
             throw `Invalid value of machine!`;
         }
 
-        nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        nOfPeriods = parseInt(periods.value);
         if (isNaN(nOfPeriods) || nOfPeriods < 3 || nOfPeriods > 10) {
-            document.getElementById("nOfPeriods").value = "";
-            document.getElementById("nOfPeriods").focus();
+            periods.value = "";
+            periods.focus();
             alert(`Invalid value for the number of years of investment! Enter a number from 3-10.`);
             throw `Invalid value for the number of years of investment!`;
         } else {
             if (years != nOfPeriods) {
                 years = nOfPeriods;
-                document.getElementById('check-button').style.backgroundColor = 'yellow';
-                document.getElementById('check-button').innerHTML = 'Click!';
+                checkButton.style.backgroundColor = 'yellow';
+                checkButton.innerHTML = 'Check!';
             }
         }
 
-        discountRate = parseInt(document.getElementById("discountRate").value);
+        discountRate = parseInt(discount.value);
         if (isNaN(discountRate) || discountRate < 1 || discountRate > 20) {
-            document.getElementById("discountRate").value = "";
-            document.getElementById("discountRate").focus();
+            discount.value = "";
+            discount.focus();
             alert(`Invalid value of discountRate! Enter a number from 1-20.`);
             throw `Invalid value of discountRate!`;
         }
 
-        depreciation = parseInt(document.getElementById("depreciation").value);
+        depreciation = parseInt(machineDepreciation.value);
         if (isNaN(depreciation) || depreciation < 10 || depreciation > 100) {
-            document.getElementById("depreciation").value = "";
-            document.getElementById("depreciation").focus();
+            machineDepreciation.value = "";
+            machineDepreciation.focus();
             alert(`Invalid value of machine depreciation! Enter a number from 10-100.`);
             throw `Invalid value of machine depreciation!`;
         }
 
-        if (document.getElementById('sales-costs').innerHTML === '') { alert(`Please fill in the field of the number of years of investment and click the yellow button!`); }
+        if (salesCosts.innerHTML === '') { alert(`Please fill in the field of the number of years of investment and click the yellow button!`); }
         //gets arrays of sales and costs
         let sales = [];
         let costs = [];
-        for (let i = 0; i < nOfPeriods - 1; i++) {
+        const saleObj = document.getElementById('sales');
+        const costObj = document.getElementById('costs');
 
-            let sale = parseInt(document.getElementById('sales').children[i].value);
+        for (let i = 0; i < nOfPeriods - 1; i++) {
+            let sale = parseInt(saleObj.children[i].value);
             if (isNaN(sale) || sale < 0) {
-                document.getElementById('sales').children[i].value = "";
-                document.getElementById('sales').children[i].focus();
+                saleObj.children[i].value = "";
+                saleObj.children[i].focus();
                 alert(`Invalid value of sale! Must be zero or greater.`);
                 throw `Invalid value of sale!`;
             }
             sales.push(sale);
 
-            let cost = parseInt(document.getElementById('costs').children[i].value);
+            let cost = parseInt(costObj.children[i].value);
             if (isNaN(cost) || cost < 0) {
-                document.getElementById('costs').children[i].value = "";
-                document.getElementById('costs').children[i].focus();
+                costObj.children[i].value = "";
+                costObj.children[i].focus();
                 alert(`Invalid value of cost! Must be zero or greater.`);
                 throw `Invalid value of cost!`;
             }
