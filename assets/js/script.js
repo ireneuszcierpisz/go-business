@@ -1,16 +1,12 @@
+// Change the background color of a DOM element if the mouse pointer is over or beyond it.
 function mouseOver(domObj) {
-    if (domObj.id == "check-button") {
-        domObj.style.backgroundColor = '#FFD700';
-    }
-    else { domObj.style.backgroundColor = '#AFEEEE'; }
+    domObj.style.backgroundColor = '#AFEEEE';
 }
 
 function mouseOut(domObj) {
-    if (domObj.id == "check-button") {
-        domObj.style.backgroundColor = 'yellow';
-    }
-    else { domObj.style.backgroundColor = '#E0FFFF'; }
+    domObj.style.backgroundColor = '#E0FFFF';
 }
+
 
 // Wait for the DOM to finish loading before running the script
 
@@ -65,7 +61,7 @@ function showSalesCostsFields() {
                     `;
             }
             salesCosts.innerHTML = `
-                    <p>You entered duration of the business ${nOfPeriods} years (Note that the investment year is year zero).  Now complete next necessary data, please. Enter the values ​​of planned sales and costs starting from year one.</p>
+                    <p>You entered duration of the business ${nOfPeriods} years (Note that the investment year is year zero). Now enter the values ​​of planned sales and costs starting from year one.</p>
                     <p>First your assumptions about <b>sales</b> in the following years:</p>
                     <p id="sales">` + html4inputs + `</p>`
                 + `<p> Here your assumptions about <b>costs:</b></p>
