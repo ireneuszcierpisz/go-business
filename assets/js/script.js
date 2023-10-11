@@ -1,3 +1,11 @@
+function mouseOver(domObj) {
+    domObj.style.backgroundColor = '#AFEEEE';
+}
+
+function mouseOut(domObj) {
+    domObj.style.backgroundColor = '#E0FFFF';
+}
+
 // Wait for the DOM to finish loading before running the script
 
 document.addEventListener("DOMContentLoaded", function () {
