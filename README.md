@@ -24,12 +24,12 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 #### Fields where an users can put in theirs assumptions about a bussiness: 
 
 
-![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/first-step.png)
+![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/first-step2.png)
 
 
 #### Sales and costs are injected to the html with java script using DOM
 
-- To launch this part of the code user has to use the Enter key when inputs the number of years.
+- To launch this part of the code user has to use the Check button when inputs the number of years.
 - A number of fields of sales and costs to fill in is equal to the number given by the user minus 1 as a year of investment is zero year.
 
 ![Picture of launched sales-costs here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JS-DOM.png)
@@ -74,7 +74,7 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 - Link
 
-   ![by W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F)
+   [by W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F)
 
 
 - Screenshot
@@ -88,7 +88,7 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 - Link
 
-  ![by Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+  [by Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fireneuszcierpisz.github.io%2Fgo-business%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 )
 
 - Screenshot
@@ -117,8 +117,6 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 ### Content
 
-- The icon in the header section were taken from Font Awesome
+- The icon in the header section and the copyright icon were taken from Font Awesome
 - Font Flamenco for the logo and ADLaM Display were taken from Google Fonts
 - Favicon I got thanks to [favicon.io](https://favicon.io/)
-
-
