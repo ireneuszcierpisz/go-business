@@ -46,8 +46,20 @@ div {
     padding: 0;
 }
 
+section {
+    margin-bottom: 3px;
+}
+
 p {
     padding: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    margin: 3px;
+    color: blue;
+    font-size: 0.9rem;
 }
 
 #investment {

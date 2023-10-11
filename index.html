@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div>
+    <header>
       <h1 id="logo">
         <i class="fa-solid fa-money-bill-trend-up"></i> <em>GoBusiness</em>
       </h1>
@@ -32,11 +32,11 @@
           will make you more money than you just invested.</em
         >
       </h3>
-    </div>
+    </header>
 
     <!-- Add input fields that the user will fill in-->
     <div id="assumptions">
-      <div id="investment">
+      <section id="investment">
         <p>
           Put in below your assumptions how much money you want to invest in
           cash in year zero:
@@ -81,12 +81,12 @@
           <span><button id="check-button" type="button">Check!</button></span>
           <span id="err-msg"></span>
         </p>
-      </div>
+      </section>
 
       <!-- Here html elements will be added with Java Script -->
-      <div id="sales-costs"></div>
+      <section id="sales-costs"></section>
 
-      <div id="discount-rate">
+      <section id="discount-rate">
         <p>Value of Capital Discount Rate or Debt Percentage.</p>
         <p>
           <label for="discountRate"
@@ -101,8 +101,8 @@
             aria-label="Input integer number"
           />%
         </p>
-      </div>
-      <div id="sell-release">
+      </section>
+      <section id="sell-release">
         <p>
           <label for="depreciation"
             >At the end of the last year of making your business you sell the
@@ -128,13 +128,20 @@
           Click here to check if at the end of the periods of your investment
           the Net Present Value is positive.
         </button>
-      </div>
+      </section>
     </div>
 
-    <div id="answer" aria-labelledby="message">
+    <section id="answer" aria-labelledby="message">
       <!-- Here html elements will be added with Java Script -->
       <p id="message"></p>
-    </div>
+    </section>
+
+    <footer>
+      <em>
+        Copyright <i class="fa-regular fa-copyright"></i>
+        <b>GoBusiness</b> Ireneusz Cierpisz
+      </em>
+    </footer>
 
     <!-- fontawesome script-->
     <script
