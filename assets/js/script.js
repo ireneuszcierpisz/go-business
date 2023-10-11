@@ -1,9 +1,15 @@
 function mouseOver(domObj) {
-    domObj.style.backgroundColor = '#AFEEEE';
+    if (domObj.id == "check-button") {
+        domObj.style.backgroundColor = '#FFD700';
+    }
+    else { domObj.style.backgroundColor = '#AFEEEE'; }
 }
 
 function mouseOut(domObj) {
-    domObj.style.backgroundColor = '#E0FFFF';
+    if (domObj.id == "check-button") {
+        domObj.style.backgroundColor = 'yellow';
+    }
+    else { domObj.style.backgroundColor = '#E0FFFF'; }
 }
 
 // Wait for the DOM to finish loading before running the script
@@ -16,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+const periods = document.getElementById("nOfPeriods");
+
 /**
  * Get HTML element and add event listeners to it
  * Gets the value directly from the DOM
@@ -23,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function showSalesCostsFields() {
     document.getElementById("check-button").addEventListener("click", function () {
-        let nOfPeriods = parseInt(document.getElementById("nOfPeriods").value);
+        let nOfPeriods = parseInt(periods.value);
         document.getElementById("err-msg").innerHTML = '';
         let tip = " (Number from 3 to 10 required)";
         let ok = false;
