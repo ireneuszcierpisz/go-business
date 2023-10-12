@@ -52,21 +52,42 @@
 
 ### Functional Testing
 
-    - All input fields only accept and submit numbers adhere to the conditions set by each label.
+    - All input fields only accept and submit numbers adhere to the conditions set by each label. E.g.:
+
+I
 
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_capital.png)
 
+
+II
+
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_machine.png)
+
+
+III
 
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_periods-ok.png)
 
+
+IV
+
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_periods-err.png)
+
+
+V
 
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_sales-costs.png)
 
+
+IV
+
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_discount-rate.png)
 
+
+VII
+
 ![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_depreciation.png)
+
 
 - Also I tested GoBusiness asking an accountant for the review.
 
