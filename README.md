@@ -3,7 +3,7 @@
 
 GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
 
-![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done.png)
+![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done2.png)
 
 - Page is full responsive.
 - Easy navigation. 
@@ -65,7 +65,7 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 - Screenshot
 
-   ![by amiresponsive](https://github.com/ireneuszcierpisz/go-business/blob/main/media/responsive.png)
+   ![by amiresponsive](https://github.com/ireneuszcierpisz/go-business/blob/main/media/responsive1.png)
 
 
 #### HTML
