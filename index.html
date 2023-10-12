@@ -36,7 +36,8 @@
 
     <!-- Add input fields that the user will fill in-->
     <div id="assumptions">
-      <section id="investment">
+      <section id="investment" class="grey">
+        <h4>Investment</h4>
         <p>
           Put in below your assumptions how much money you want to invest in
           cash in year zero:
@@ -84,9 +85,13 @@
       </section>
 
       <!-- Here html elements will be added with Java Script -->
-      <section id="sales-costs"></section>
+      <section class="grey">
+        <h4>Sales & Costs</h4>
+        <div id="sales-costs"></div>
+      </section>
 
-      <section id="discount-rate">
+      <section id="discount-rate" class="grey">
+        <h4>Discount Rate</h4>
         <p>Value of Capital Discount Rate or Debt Percentage.</p>
         <p>
           <label for="discountRate"
@@ -102,7 +107,8 @@
           />%
         </p>
       </section>
-      <section id="sell-release">
+      <section id="sell-release" class="grey">
+        <h4>Depreciation</h4>
         <p>
           <label for="depreciation"
             >At the end of the last year of making your business you sell the
@@ -132,6 +138,7 @@
     </div>
 
     <section id="answer" aria-labelledby="message">
+      <h4>Net Present Value</h4>
       <!-- Here html elements will be added with Java Script -->
       <p id="message"></p>
     </section>

@@ -62,22 +62,7 @@ footer {
     font-size: 0.9rem;
 }
 
-#investment {
-    line-height: 1.6;
-    background-color: #DCDCDC;
-}
-
-#sales-costs {
-    line-height: 1.6;
-    background-color: #DCDCDC;
-}
-
-#discount-rate {
-    line-height: 1.6;
-    background-color: #DCDCDC;
-}
-
-#sell-release {
+.grey {
     line-height: 1.6;
     background-color: #DCDCDC;
 }
