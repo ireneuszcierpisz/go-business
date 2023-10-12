@@ -1,7 +1,7 @@
 ![Go Business logo](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
 
 
-GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
+## GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
 
 ![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done2.png)
 
@@ -40,7 +40,7 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 - This is a message included a value of the NPV.
 - JS injects new elements to index.html using template literals
 
-![Picture of gallery here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JSDOM-finalmessage.png)
+![NPV img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/JSDOM-finalmessage.png)
 
 
 ## Accessibility
@@ -50,17 +50,35 @@ GoBusiness is an investment game based on the NPV economic measure (you can find
 
 ## Testing
 
-- Making GoBusiness I have permanently conducting testing using Google Chrome Inspect feature, in particular the Console Toolbar, to test the functionality of the java script of the application.
-- Tools for checking elements style were very helpful as well.
+### Functional Testing
+
+    - All input fields only accept and submit numbers adhere to the conditions set by each label.
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_capital.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_machine.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_periods-ok.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_periods-err.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_sales-costs.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_discount-rate.png)
+
+![Check-input img](https://github.com/ireneuszcierpisz/go-business/blob/main/media/check-input_depreciation.png)
+
 - Also I tested GoBusiness asking an accountant for the review.
-- GoBusiness is responsive on different screen sizes and in different browsers as well.
+
 
 
 ### Validator Testing
 
 #### Responsiveness
 
-- Link https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/
+    - GoBusiness is responsive on different screen sizes and in different browsers as well.
+
+    [Link to amiresponsive](https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/)
 
 
 - Screenshot
