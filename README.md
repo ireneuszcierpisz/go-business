@@ -1,7 +1,7 @@
 ![Go Business logo](https://github.com/ireneuszcierpisz/go-business/blob/main/media/logo.png)
 
 
-## GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
+### GoBusiness is an investment game based on the NPV economic measure (you can find more about it in the section Credit). Using GoBusiness you can check whether your investment will be profitable down the line. Note that this app is not an official tool for business, it is just a game.
 
 ![Picture of the site here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/well-done2.png)
 
@@ -21,7 +21,7 @@
 ![Picture of the heading here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/heading.png)
 
 
-#### Fields where an users can put in theirs assumptions about a bussiness: 
+#### Fields where users can put in theirs assumptions about a bussiness:
 
 
 ![Picture of the business assumptions here](https://github.com/ireneuszcierpisz/go-business/blob/main/media/first-step2.png)
@@ -97,9 +97,11 @@ VII
 
 #### Responsiveness
 
-    - GoBusiness is responsive on different screen sizes and in different browsers as well.
+- GoBusiness is responsive on different screen sizes and in different browsers as well.
 
-    [Link to amiresponsive](https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/)
+- Link
+
+   [amiresponsive](https://ui.dev/amiresponsive?url=https://ireneuszcierpisz.github.io/go-business/)
 
 
 - Screenshot
